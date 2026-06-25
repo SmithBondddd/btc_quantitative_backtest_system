@@ -1,0 +1,16 @@
+# Python 编译缓存
+__pycache__/
+*.pyc
+
+# 虚拟环境
+venv/
+
+# 敏感凭据
+.env
+
+# 拉取的行情数据（体积巨大，动态拉取即可）
+data/history/*.csv
+
+# 回测输出产物（每次运行自动生成）
+output/*.png
+output/*.csv

@@ -165,7 +165,7 @@ BTC_Backtest_System/
 
 ```bash
 # 1. 克隆仓库
-git clone github.com/SmithBondddd/BTC_Quantitative_Backtest_System
+git clone https://github.com/SmithBondddd/BTCQuantitativeBacktestSystem.git
 cd BTC_Backtest_System
 
 # 2. 创建虚拟环境（推荐）
@@ -521,7 +521,7 @@ BTC_Backtest_System/
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/SmithBondddd/BTCQuantitativeBacktestSystem.git
 cd BTC_Backtest_System
 
 # 2. Create a virtual environment (recommended)

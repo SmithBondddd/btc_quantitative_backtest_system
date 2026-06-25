@@ -14,3 +14,5 @@ data/history/*.csv
 # 回测输出产物（每次运行自动生成）
 output/*.png
 output/*.csv
+
+.idea/

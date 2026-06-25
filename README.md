@@ -57,7 +57,7 @@
 ## 架构设计
 
 ```
-BTC_Backtest_System/
+btc_quantitative_backtest_system/
 │
 ├── .env.example             #   环境变量模板（纯净版，可安全上传）
 ├── .gitignore               #   Git 黑名单（拦截敏感凭据与运行时产物）
@@ -165,8 +165,8 @@ BTC_Backtest_System/
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/SmithBondddd/BTCQuantitativeBacktestSystem.git
-cd BTC_Backtest_System
+git clone https://github.com/SmithBondddd/btc_quantitative_backtest_system.git
+cd btc_quantitative_backtest_system
 
 # 2. 创建虚拟环境（推荐）
 python -m venv venv
@@ -317,7 +317,7 @@ MMR 阶梯（Binance BTCUSDT 逐仓）：
 | 夏普比率 | (超额收益均值 / 波动率) × √年化因子 |
 | 索提诺比率 | (超额收益均值 / 下行波动率) × √年化因子 |
 | 胜率 | 盈利交易数 / 总交易数 |
-| 盈亏比 | 总盈利 / |总亏损| |
+| 盈亏比 | 总盈利 / \|总亏损\| |
 
 ### 7. 可视化 — `evaluation/plot.py`
 
@@ -395,7 +395,7 @@ MMR 阶梯（Binance BTCUSDT 逐仓）：
 - [Introduction](#introduction)
 - [Architecture](#architecture)
 - [Data Flow](#data-flow)
-- [Quick Start](#quick-start-1)
+- [Quick Start](#quick-start)
 - [Configuration](#configuration)
 - [Module Details](#module-details)
 - [Built-in Strategies](#built-in-strategies)
@@ -403,7 +403,7 @@ MMR 阶梯（Binance BTCUSDT 逐仓）：
 - [Risk Model](#risk-model)
 - [Output](#output)
 - [Technical Debt & Caveats](#technical-debt--caveats)
-- [Roadmap](#roadmap-1)
+- [Roadmap](#roadmap)
 
 ---
 
@@ -425,7 +425,7 @@ MMR 阶梯（Binance BTCUSDT 逐仓）：
 ## Architecture
 
 ```
-BTC_Backtest_System/
+btc_quantitative_backtest_system/
 │
 ├── .env.example             #   Env template (clean, safe to commit)
 ├── .gitignore               #   Git ignore rules (secrets & runtime artifacts excluded)
@@ -521,8 +521,8 @@ BTC_Backtest_System/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/SmithBondddd/BTCQuantitativeBacktestSystem.git
-cd BTC_Backtest_System
+git clone https://github.com/SmithBondddd/btc_quantitative_backtest_system.git
+cd btc_quantitative_backtest_system
 
 # 2. Create a virtual environment (recommended)
 python -m venv venv

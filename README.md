@@ -381,6 +381,7 @@ MMR 阶梯（Binance BTCUSDT 逐仓）：
 - **V4.0** — 多币种并发回测 / 投资组合优化 / 实盘信号桥接
 
 ---
+## 📮联系作者：l1906249488@gmail.com
 
 ---
 
@@ -736,6 +737,8 @@ Known limitations to be addressed in future versions:
 - **V3.0** — Walk-Forward optimization / Parameter grid search / Out-of-sample testing
 - **V4.0** — Multi-asset concurrent backtesting / Portfolio optimization / Live signal bridge
 
+---
+📮Email：l1906249488@gmail.com
 ---
 
 <div align="center">

@@ -317,7 +317,7 @@ MMR 阶梯（Binance BTCUSDT 逐仓）：
 | 夏普比率 | (超额收益均值 / 波动率) × √年化因子 |
 | 索提诺比率 | (超额收益均值 / 下行波动率) × √年化因子 |
 | 胜率 | 盈利交易数 / 总交易数 |
-| 盈亏比 | 总盈利 / \|总亏损\| |
+| 盈亏比（Profit Loss ratio） | 平均盈利 / \|平均亏损\| |
 
 ### 7. 可视化 — `evaluation/plot.py`
 
@@ -454,7 +454,7 @@ btc_quantitative_backtest_system/
 │   └── risk.py              #   Risk calculator (slippage/liquidation/MMR tiers)
 │
 ├── evaluation/              # ── Stage 5: Performance ──
-│   ├── metrics.py           #   Metrics (Sharpe/Sortino/Max Drawdown/Profit Factor)
+│   ├── metrics.py           #   Metrics (Sharpe/Sortino/Max Drawdown/Profit Loss ratio)
 │   └── plot.py              #   Dashboard (multi-strategy bar chart comparison)
 │
 └── output/                  #   Generated charts (PNG/CSV excluded by .gitignore)
@@ -674,7 +674,7 @@ MMR Tiers (Binance BTCUSDT Isolated Margin):
 | Sharpe Ratio | (mean_excess_return / σ) × √annualization_factor |
 | Sortino Ratio | (mean_excess_return / downside_σ) × √annualization_factor |
 | Win Rate | winning_trades / total_trades |
-| Profit Factor | gross_profit / |gross_loss| |
+| Profit Loss ratio | avg_profit / \|avg_loss\| |
 
 ### 7. Visualization — `evaluation/plot.py`
 

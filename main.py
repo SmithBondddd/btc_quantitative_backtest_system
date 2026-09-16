@@ -96,7 +96,7 @@ class QuantSystem:
                 "夏普比率": adv_metrics["Sharpe Ratio"],
                 "索提诺比率": adv_metrics["Sortino Ratio"],
                 "胜率(%)": adv_metrics["Win Rate (%)"],
-                "盈亏比": adv_metrics["Profit Factor"],
+                "Profit Loss ratio": adv_metrics["Profit Loss ratio"],
                 "总交易次数": adv_metrics["Total Trades"]
             })
 

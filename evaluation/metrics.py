@@ -45,7 +45,7 @@ class PerformanceMetrics:
             "Sortino Ratio": sortino,
             "Total Trades": trade_stats['total_trades'],
             "Win Rate (%)": trade_stats['win_rate'] * 100,
-            "Profit Factor": trade_stats['profit_factor']
+            "Profit Loss ratio": trade_stats['pnl_ratio']
         }
 
         return metrics_report
@@ -121,7 +121,7 @@ class PerformanceMetrics:
         valid_trades_df = df[df['trade_id'] > 0]
 
         if valid_trades_df.empty:
-            return {'total_trades': 0, 'win_rate': 0.0, 'profit_factor': 0.0}
+            return {'total_trades': 0, 'win_rate': 0.0, 'pnl_ratio': 0.0}
 
         # 5. 按照 trade_id 聚合，算出每一笔完整交易的最终盈亏
         trade_pnl = valid_trades_df.groupby('trade_id')['step_pnl'].sum()
@@ -132,14 +132,14 @@ class PerformanceMetrics:
 
         win_rate = winning_trades / total_trades if total_trades > 0 else 0.0
 
-        gross_profit = trade_pnl[trade_pnl > 0].sum()
+        avg_profit = trade_pnl[trade_pnl > 0].mean()
         # 取绝对值防止除以负数
-        gross_loss = np.abs(trade_pnl[trade_pnl < 0].sum())
+        avg_loss = np.abs(trade_pnl[trade_pnl < 0].mean())
 
-        profit_factor = (gross_profit / gross_loss) if gross_loss > 0 else float('inf')
+        pnl_ratio = (avg_profit / avg_loss) if avg_loss > 0 else float('inf')
 
         return {
             'total_trades': total_trades,
             'win_rate': win_rate,
-            'profit_factor': profit_factor
+            'pnl_ratio': pnl_ratio
         }

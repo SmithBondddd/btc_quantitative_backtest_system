@@ -29,18 +29,18 @@ class PerformancePlotter:
         target_metrics = [
             "总收益率(%)", "年化收益率(%)", "最大回撤(%)",
             "夏普比率", "索提诺比率", "胜率(%)",
-            "盈亏比", "总交易次数"
+            "Profit Loss ratio", "总交易次数"
         ]
 
         # 过滤掉不在 dataframe 中的列
         plot_metrics = [m for m in target_metrics if m in df.columns]
 
-        if not plot_metrics:
+        if "策略名称" not in df.columns:
             # 如果你的字典 key 是英文，使用英文映射
             target_metrics = [
                 "Total Return (%)", "CAGR (%)", "Max Drawdown (%)",
                 "Sharpe Ratio", "Sortino Ratio", "Win Rate (%)",
-                "Profit Factor", "Total Trades"
+                "Profit Loss ratio", "Total Trades"
             ]
             plot_metrics = [m for m in target_metrics if m in df.columns]
 

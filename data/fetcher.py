@@ -101,7 +101,7 @@ class DataFetcher:
                     print("查无更多更近的历史数据，抓取循环正常结束。")
                     break
 
-                # 为完整的 12 维数据穿上西装
+                # 将返回数据转为DataFrame
                 df_batch = pd.DataFrame(raw_ohlcv, columns=[
                     'timestamp',               # 开盘时间
                     'open',                    # 开盘价
